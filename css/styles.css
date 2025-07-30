@@ -1,0 +1,656 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #0d0d0d, #000000);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* ---------- GLOBAL ---------- */
+section {
+  padding: 100px 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+  color: #56e2e7;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(127, 212, 251, 0.1);
+}
+
+.navbar .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
+
+.logo h2 {
+  position: relative;
+  left: 40%;
+}
+
+.logo span {
+  color: #56e2e7;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #56e2e7;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(ellipse at bottom, #013a44, #000000);
+  padding: 140px 40px;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero-content .highlight {
+  color: #56e2e7;
+}
+
+.hero-content p {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #56e2e7;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #56e2e7;
+  color: #56e2e7;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  font-size: 120px;
+  color: #56e2e7;
+}
+
+/* ---------- ABOUT ---------- */
+.about-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h3 {
+  color: #56e2e7;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.stat-item h4 {
+  font-size: 2rem;
+  color: #56e2e7;
+}
+
+.stat-item p {
+  color: #aaa;
+}
+
+.about-image {
+  flex: 1;
+  font-size: 100px;
+  color: #56e2e7;
+  text-align: center;
+}
+
+/* ---------- SERVICES ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: 0.3s ease;
+  border: 1px solid #002f3d;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(127, 247, 251, 0.2);
+}
+
+.service-icon {
+  font-size: 50px;
+  color: #56e2e7;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: #56e2e7;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* === TEAM SECTION COM CARROSSEL 3D ESTILO COVERFLOW === */
+.team {
+  background: radial-gradient(ellipse at center, #000f13 0%, #000 100%);
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* Adicione no seu styles.css */
+.teamSwiper .swiper-slide {
+  width: 300px; /* pode ajustar o tamanho */
+  height: auto;
+  flex-shrink: 0;
+  transform: scale(0.8);
+}
+
+.team .section-header h2 {
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.team .section-header span {
+  color: #56e2e7;
+}
+
+.team .section-header p {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 60px;
+}
+
+.team-card {
+  width: 280px;
+  height: 420px;
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease;
+  box-shadow: 0 0 20px rgba(127, 232, 251, 0.2);
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 26, 36, 0.75);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.0rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.team-photo:hover .overlay {
+  opacity: 1;
+}
+
+.team-card h3 {
+  margin-top: 12px;
+  color: #56e2e7;
+  font-size: 1.2rem;
+}
+
+.janela-descricao {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-width: 300px;
+  text-align: center;
+}
+
+.janela-descricao p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.janela-descricao button {
+  padding: 8px 16px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.janela-descricao button:hover {
+  background-color: #444;
+}
+
+/* Estilo padrão para todas as imagens: preto e branco */
+.teamSwiper .swiper-slide img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+/* Slide ativo: imagem colorida */
+.teamSwiper .swiper-slide-active img {
+  filter: grayscale(0%);
+  transform: scale(1.05); /* Opcional: dá destaque com zoom */
+  z-index: 2;
+}
+
+.teamSwiper .swiper-slide-active .team-card {
+  box-shadow: 0 0 25px rgba(213, 128, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* ---------- Swiper Buttons ---------- */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #56e2e7;
+}
+
+/* ---------- CONTACT ---------- */
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contact-info, .contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-item i {
+  font-size: 24px;
+  color: #56e2e7;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+.contact-form button {
+  background: #56e2e7;
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background: #001717;
+  padding: 60px 40px 30px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo h3 {
+  margin: 0;
+  color: white;
+  font-size: 35px;
+}
+
+.footer-logo h3 span {
+  color: rgb(25, 183, 189);
+  margin-bottom: 15px;
+}
+
+.footer-logo img {
+  display: relative;
+  height: auto;
+  width: 45px;
+}
+
+.footer-section h4 {
+  color: #56e2e7;
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.social-links a {
+  color: #56e2e7;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVIDADE === */
+
+/* Tablets e pequenos desktops (max-width: 992px) */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .navbar .nav-container {
+    padding: 15px 20px;
+  }
+
+  .nav-menu {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Hero - layout em coluna */
+  .hero {
+    flex-direction: column;
+    padding: 80px 20px;
+  }
+
+  .hero-image {
+    font-size: 80px;
+    margin-top: 30px;
+  }
+
+  /* About */
+  .about-content {
+    flex-direction: column;
+  }
+
+  /* Contact */
+  .contact-content {
+    flex-direction: column;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+}
+
+/* Smartphones e telas pequenas (max-width: 600px) */
+@media (max-width: 600px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+
+  /* Navbar */
+  .nav-menu {
+    display: none; /* esconder menu para implementar hamburger depois */
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .logo h2 {
+    left: 0;
+    font-size: 1.2rem;
+  }
+
+  /* Hero */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* About */
+  .about-text h3 {
+    font-size: 1.4rem;
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Team */
+  .teamSwiper .swiper-slide {
+    width: 90vw !important;
+  }
+
+  .team-card {
+    width: 90vw !important;
+    height: auto;
+  }
+
+  /* Contact */
+  .contact-info, .contact-form {
+    min-width: 100%;
+  }
+
+  /* Footer */
+  .footer-logo h3 {
+    font-size: 1.8rem;
+  }
+
+  .footer-logo img {
+    width: 35px;
+  }
+}
