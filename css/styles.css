@@ -631,74 +631,234 @@ section {
 }
 
 /* Precesso de desenvolvimento de softwares */
-.process.vertical {
-  background: #0c0c0c;
-  padding: 100px 20px;
-  color: #fff;
-  text-align: center;
-}
-
-.process.vertical .section-header h2 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.process.vertical .section-header span {
-  color: #56e2e7;
-}
-
-.process.vertical .section-header p {
-  font-size: 1.1rem;
-  color: #ccc;
-  margin-bottom: 60px;
-  max-width: 600px;
-  margin: 0 auto 60px auto;
-  line-height: 1.6;
-}
-
 .vertical-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  max-width: 700px;
-  margin: 0 auto;
+  margin: 15px;
 }
 
-.step-vertical {
-  background: #111;
-  border-radius: 16px;
-  padding: 30px 20px;
-  box-shadow: 0 0 20px rgba(86, 226, 231, 0.1);
-  border: 1px solid #222;
+.desenvolvimento-etapa {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+  width: 1150px;
+  height: 450px;
+}
+
+.image-container img {
+  margin: 80px 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 300px;
+  color: #fff;
+}
+
+.text-overlay h3 {
+  font-size: 1.4rem;
+  color: #56e2e7;
+  margin-bottom: 10px;
+}
+
+.text-overlay p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+/* Diferenciais */
+
+.diferenciais {
+  background-color: #0f0f0f;
+  padding: 100px 40px;
+  color: #fff;
+}
+
+.diferenciais-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.diferencial-box {
+  flex: 1 1 280px;
+  background: #1b1b1b;
+  border: 1px solid #0078d4;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.step-vertical:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(86, 226, 231, 0.3);
+.diferencial-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 120, 212, 0.3);
 }
 
-.step-vertical img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 4px rgba(86, 226, 231, 0.3));
-}
-
-.step-content h3 {
-  font-size: 1.3rem;
+.diferencial-box i {
+  font-size: 2.5rem;
   color: #56e2e7;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
-.step-content p {
-  color: #aaa;
-  font-size: 0.95rem;
-  line-height: 1.6;
+.diferencial-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #56e2e7;
+}
+
+/* Avaliação de clientes */
+
+.avaliacoes {
+  background: #121212;
+  padding: 100px 40px;
+  color: #fff;
+}
+
+.avaliacoes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.avaliacao-card {
+  background: #1e1e1e;
+  border: 1px solid #444;
+  border-left: 5px solid #56e2e7;
+  padding: 25px 20px;
+  border-radius: 10px;
+  max-width: 350px;
+  font-style: italic;
+}
+
+.avaliacao-card p {
+  color: #ccc;
+}
+
+.avaliacao-card span {
+  display: block;
+  margin-top: 15px;
+  color: #56e2e7;
+  font-weight: bold;
+}
+
+/* Ofertas */
+
+.ofertas {
+  background: linear-gradient(120deg, #002a33, #004d5e);
+  color: #fff;
+  padding: 100px 40px;
+}
+
+.ofertas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.oferta-card {
+  background: #003b49;
+  border: 1px solid #56e2e7;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1 1 280px;
+  transition: 0.3s ease;
+}
+
+.oferta-card h3 {
+  font-size: 1.6rem;
+  color: #56e2e7;
+}
+
+.oferta-card p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.oferta-card strong {
+  display: block;
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+.oferta-card button {
+  background: #56e2e7;
+  border: none;
+  padding: 12px 24px;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.oferta-card button:hover {
+  background: #3ccdd4;
+}
+
+.oferta-card.destaque {
+  border: 2px solid #fff;
+  background: #005e70;
+}
+
+/* Catálogo */
+.catalogo {
+  background-color: #0d0d0d;
+  padding: 100px 40px;
+  color: #fff;
+}
+
+.catalogo-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catalogo-image {
+  flex: 1 1 400px;
+}
+
+.catalogo-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.catalogo-text {
+  flex: 1 1 400px;
+}
+
+.catalogo-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #56e2e7;
+}
+
+.catalogo-text p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
 }
 
 /* ---------- CONTACT ---------- */
@@ -881,6 +1041,29 @@ section {
   .footer-logo {
     justify-content: center;
   }
+    .image-container {
+    width: 90%;
+    height: auto;
+  }
+
+  .image-container img {
+    height: auto;
+  }
+
+  .text-overlay {
+    bottom: 10px;
+    right: 10px;
+    padding: 15px;
+    max-width: 250px;
+  }
+
+  .text-overlay h3 {
+    font-size: 1.2rem;
+  }
+
+  .text-overlay p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Smartphones e telas pequenas (max-width: 600px) */
@@ -958,5 +1141,29 @@ section {
 
   .footer-logo img {
     width: 35px;
+  }
+
+    .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-overlay {
+    position: static;
+    background: transparent;
+    color: #fff;
+    max-width: 100%;
+    padding: 10px 0;
+    margin-top: -40px;
+  }
+
+  .text-overlay h3 {
+    font-size: 1.1rem;
+    color: #56e2e7;
+  }
+
+  .text-overlay p {
+    font-size: 0.9rem;
+    color: #ccc;
   }
 }
