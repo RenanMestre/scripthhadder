@@ -995,7 +995,7 @@
   /* === RESPONSIVIDADE === */
 
   /* Tablets e pequenos desktops (max-width: 992px) */
-  @media (max-width: 992px) {
+@media (max-width: 992px) {
   .container {
     padding: 0 20px;
   }
@@ -1026,9 +1026,19 @@
     flex-direction: column;
   }
 
-  /* Contact */
-  .contact-content {
+  /* Team */
+  .teamSwiper {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 90vw;
+  }
+
+  /* Hover efeito */
+  .team-card:hover {
+    transform: translateY(-5px);
   }
 
   /* Footer */
@@ -1065,6 +1075,35 @@
   }
 }
 @media (max-width: 768px) {
+  /* Team */
+  .team .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .teamSwiper {
+    padding: 0 10px;
+  }
+
+  .teamSwiper .swiper-slide {
+    width: 250px !important;
+    transform: scale(1);
+    filter: grayscale(0%);
+  }
+
+  .team-card {
+    height: 380px;
+  }
+
+  .team-photo img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .team .section-header p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
   /* Navbar mobile refinada */
   .nav-menu {
     display: none;
@@ -1223,7 +1262,7 @@
     width: 35px;
   }
 
-    .image-container {
+  .image-container {
     width: 100%;
     height: auto;
   }
@@ -1260,7 +1299,44 @@
   .footer-logo h3 {
     font-size: 1.1rem;
   }
+
+  /* Team */
+  .team .section-header h2 {
+    font-size: 1.8rem;
   }
+
+  .teamSwiper .swiper-slide {
+    width: 90vw !important;
+    transform: scale(1);
+  }
+
+  .team-card {
+    height: 350px;
+  }
+
+  .team-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .overlay {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .janela-descricao {
+    width: 90vw;
+    padding: 20px;
+  }
+
+  .janela-descricao p {
+    font-size: 0.95rem;
+  }
+
+  .team-photo img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
   /* Ajuste para garantir que imagens não ultrapassem o container */
   img {
