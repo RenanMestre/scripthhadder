@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="img/Ícone sem fundo.png" type="image/x-icon">
 </head>
 <body>
     <!-- Header -->
@@ -14,7 +15,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <h2>Script<span>Hatter</span></h2>
+                    <h2>Script<span>Hadder</span></h2>
                     <img src="img/Ícone sem fundo.png" alt="Ícone">
                 </div>
                 <ul class="nav-menu">
@@ -24,7 +25,7 @@
                     <li><a href="#team">Equipe</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
-                <div class="hamburger">
+                <div class="hamburguer" id="hamburguer">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -32,7 +33,6 @@
             </div>
         </nav>
     </header>
-
     <main>
         <section class="hero-split">
         <div class="hero-text">
@@ -496,38 +496,38 @@
     
     <script src="js/script.js"></script>
     <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-<script>
-    // JS para ativar ao rolar
-    const hero = document.querySelector(".hero-split");
-    const observer = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) {
-        hero.classList.add("reveal");
-    }
-    }, { threshold: 0.3 });
+    <script>
+        // Ativar animação ao rolar para o Hero
+        const hero = document.querySelector(".hero-split");
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                hero.classList.add("reveal");
+            }
+        }, { threshold: 0.3 });
 
-    observer.observe(hero);
+        observer.observe(hero);
 
-    var swiper = new Swiper(".teamSwiper", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        initialSlide: 2,
-        coverflowEffect: {
-            rotate: 15,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-</script>
-
+        // Swiper do carrossel de equipe
+        var swiper = new Swiper(".teamSwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            initialSlide: 2,
+            coverflowEffect: {
+                rotate: 15,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 </html>

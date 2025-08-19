@@ -1,7 +1,13 @@
 // Menu mobile
-const hamburger = document.getElementById('hamburger');
+const hamburguer = document.getElementById('hamburguer');
 const navMenu = document.querySelector('.nav-menu');
-hamburger.addEventListener('click', () => navMenu.classList.toggle('active'));
+
+if (hamburguer && navMenu) {
+  hamburguer.addEventListener('click', () => {
+    hamburguer.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+}
 
 // Swiper equipe (coverflow)
 const teamSwiper = new Swiper(".teamSwiper", {
@@ -48,4 +54,3 @@ img.addEventListener('click', function () {
 function fecharDescricao() {
 document.getElementById('janela-descricao').style.display = 'none';
 }
-
